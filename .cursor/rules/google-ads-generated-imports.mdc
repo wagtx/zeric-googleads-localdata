@@ -1,0 +1,11 @@
+---
+description: Generated Google Ads import CSVs - edit Python only unless user asks for artifacts
+alwaysApply: true
+---
+
+# Google Ads Editor imports (generated outputs)
+
+- **Source of truth** for the wide 307-column file is mothersday/build_mothersday_import.py. Reviewable changes should be **diffs on that script**, not hand-edits to the CSV.
+- **Do not** use Write or StrReplace on mothersday/mothersday-main-import.csv (or other machine-generated full-account-style TSVs) unless the user **explicitly** asks to regenerate or commit the output file.
+- After changing the builder, tell the user to run locally: python mothersday/build_mothersday_import.py so they get a normal review of the .py change and regenerate the CSV themselves.
+- **Exception:** Narrow, human-sized schemas (e.g. mothersday-sitelinks-callouts-snippets.csv) may be edited directly when the task requires it; still prefer small, reviewable diffs.
