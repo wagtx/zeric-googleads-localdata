@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "name": "zeric-googleads-localdata",
+      "path": "."
+    },
+    {
+      "name": "zeric-webmock-landing2",
+      "path": "../zeric-webmock-landing2"
+    }
+  ],
+  "settings": {}
+}
